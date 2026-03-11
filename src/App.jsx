@@ -5,6 +5,7 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Skills from './components/Skills'
 import Education from './components/Education'
+import Services from './components/Services'
 import Contact from './components/Contact'
 
 function LoadingScreen({ onComplete }) {
@@ -38,7 +39,6 @@ function LoadingScreen({ onComplete }) {
 
   return (
     <div className="fixed inset-0 bg-[#080b10] z-50 flex flex-col items-center justify-center">
-      {/* Grid background */}
       <div
         className="absolute inset-0"
         style={{
@@ -47,9 +47,7 @@ function LoadingScreen({ onComplete }) {
           backgroundSize: '48px 48px',
         }}
       />
-
       <div className="relative z-10 flex flex-col items-center gap-8 w-64">
-        {/* Name typing */}
         <div className="text-center">
           <div className="font-mono text-[#00f5c4] text-xs tracking-widest uppercase mb-3">
             // initializing
@@ -61,8 +59,6 @@ function LoadingScreen({ onComplete }) {
             <span className="animate-pulse text-[#00f5c4]">_</span>
           </h1>
         </div>
-
-        {/* Progress bar */}
         <div className="w-full">
           <div className="flex justify-between mb-2">
             <span className="font-mono text-gray-600 text-xs tracking-widest">Loading</span>
@@ -75,8 +71,6 @@ function LoadingScreen({ onComplete }) {
             />
           </div>
         </div>
-
-        {/* Status text */}
         <div className="font-mono text-gray-600 text-xs tracking-widest text-center">
           {progress < 40 && '// loading assets...'}
           {progress >= 40 && progress < 80 && '// building interface...'}
@@ -100,26 +94,18 @@ export default function App() {
   return (
     <>
       {loading && (
-        <div
-          className={`transition-opacity duration-600 ${
-            fadeOut ? 'opacity-0' : 'opacity-100'
-          }`}
-        >
+        <div className={`transition-opacity duration-600 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
           <LoadingScreen onComplete={handleComplete} />
         </div>
       )}
-
-      <main
-        className={`bg-[#080b10] text-white min-h-screen transition-opacity duration-700 ${
-          loading ? 'opacity-0' : 'opacity-100'
-        }`}
-      >
+      <main className={`bg-[#080b10] text-white min-h-screen transition-opacity duration-700 ${loading ? 'opacity-0' : 'opacity-100'}`}>
         <Navbar />
         <Hero />
         <About />
         <Projects />
         <Skills />
         <Education />
+        <Services />
         <Contact />
       </main>
     </>

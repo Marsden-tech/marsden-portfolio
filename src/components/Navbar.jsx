@@ -17,6 +17,7 @@ export default function Navbar() {
     { label: 'Projects',  href: '#projects'  },
     { label: 'Skills',    href: '#skills'    },
     { label: 'Education', href: '#education' },
+    { label: 'Services',  href: '#services'  },
     { label: 'Contact',   href: '#contact'   },
   ]
 
@@ -57,21 +58,9 @@ export default function Navbar() {
           className="md:hidden flex flex-col gap-1.5 cursor-pointer bg-transparent border-none outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          <span
-            className={`block w-6 h-px bg-[#00f5c4] transition-all duration-300 ${
-              menuOpen ? 'rotate-45 translate-y-2' : ''
-            }`}
-          />
-          <span
-            className={`block w-6 h-px bg-[#00f5c4] transition-all duration-300 ${
-              menuOpen ? 'opacity-0' : ''
-            }`}
-          />
-          <span
-            className={`block w-6 h-px bg-[#00f5c4] transition-all duration-300 ${
-              menuOpen ? '-rotate-45 -translate-y-2' : ''
-            }`}
-          />
+          <span className={`block w-6 h-px bg-[#00f5c4] transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+          <span className={`block w-6 h-px bg-[#00f5c4] transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
+          <span className={`block w-6 h-px bg-[#00f5c4] transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
         </button>
       </div>
 
