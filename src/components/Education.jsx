@@ -4,7 +4,7 @@ const education = [
   {
     id: '01',
     degree: 'BSc Computer Science',
-    institution: 'University',
+    institution: 'Kenyatta University',
     period: '2019 — 2024',
     description: 'Focused on Systems Engineering and Intelligent Systems. Gained deep knowledge in software architecture, algorithms, machine learning foundations, and distributed systems.',
     tags: ['Systems Engineering', 'Intelligent Systems', 'Software Architecture'],
