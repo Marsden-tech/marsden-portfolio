@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react'
 
 const stats = [
   { num: '3+', label: 'Years Experience' },
-  { num: '10+', label: 'Projects Shipped' },
+  { num: '20+', label: 'Projects Shipped' },
   { num: '10+', label: 'Technologies' },
   { num: '100%', label: 'Committed' },
 ]
@@ -112,9 +112,29 @@ export default function About() {
             </div>
           </div>
 
-          {/* Right — Terminal Card */}
-          <div className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-300">
-            <div className="bg-[#0d1117] border border-[#00f5c4]/10 p-6">
+          {/* Right — Workspace photo with terminal overlay */}
+          <div className="reveal opacity-0 translate-y-8 transition-all duration-700 delay-300 relative">
+
+            {/* Full bleed workspace photo */}
+            <div className="relative overflow-hidden">
+              <div
+                className="w-full h-80 bg-center bg-cover bg-no-repeat"
+                style={{ backgroundImage: "url('/workspace.jpeg')" }}
+              />
+              {/* Dark overlay */}
+              <div className="absolute inset-0 bg-[#080b10]/60" />
+              {/* Green tint */}
+              <div className="absolute inset-0 bg-[#00f5c4]/05" />
+              {/* Bottom fade */}
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#080b10] to-transparent" />
+              {/* Green border accent */}
+              <div className="absolute top-0 left-0 right-0 h-px bg-[#00f5c4]/40" />
+              <div className="absolute top-0 left-0 w-px h-full bg-[#00f5c4]/20" />
+              <div className="absolute top-0 right-0 w-px h-full bg-[#00f5c4]/20" />
+            </div>
+
+            {/* Terminal card overlapping the photo */}
+            <div className="bg-[#0d1117] border border-[#00f5c4]/10 p-6 -mt-8 relative z-10 mx-4">
 
               {/* Terminal top bar */}
               <div className="flex items-center gap-2 mb-6">
@@ -150,6 +170,7 @@ export default function About() {
                 })}
               </div>
             </div>
+
           </div>
 
         </div>

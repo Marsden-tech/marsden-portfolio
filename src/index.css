@@ -1,3 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;600;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ─── Base ─────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #080b10;
+  color: #c8d8e8;
+  font-family: 'Syne', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Custom Scrollbar ──────────────────────────────── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080b10;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00f5c4;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+
+/* ─── Selection Color ───────────────────────────────── */
+::selection {
+  background: #00f5c4;
+  color: #080b10;
+}
+
+/* ─── Font Classes ──────────────────────────────────── */
+.font-display {
+  font-family: 'Syne', sans-serif;
+}
+
+.font-mono {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* ─── Smooth Transition Defaults ────────────────────── */
+* {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Focus Styles ──────────────────────────────────── */
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+/* ─── Anchor Reset ──────────────────────────────────── */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ─── Section Divider ───────────────────────────────── */
+.section-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(0, 245, 196, 0.15),
+    transparent
+  );
+}
