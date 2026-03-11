@@ -7,6 +7,8 @@ const projects = [
     tags: ['Django REST Framework', 'PostgreSQL', 'JWT Authentication'],
     liveUrl: '#',
     repoUrl: 'https://github.com/0097eo/Eshop',
+    featured: true,
+    preview: null
   },
   {
     id: '02',
@@ -16,6 +18,8 @@ const projects = [
     tags: ['SpringBoot', 'Kotlin', 'PostgreSQL', 'JWT'],
     liveUrl: '#',
     repoUrl: 'https://github.com/Marsden-tech/todo-api',
+    featured: true,
+    preview: null,
   },
   {
     id: '03',
@@ -25,6 +29,8 @@ const projects = [
     tags: ['Springboot(REST APIs)', 'PostgreSQL', 'React', 'Android JetPack Compose'],
     liveUrl: '#',
     repoUrl: 'https://github.com/Marsden-tech/tiba-backend',
+    featured: true,
+    preview: '/previews/tiba.png',
   },
 ]
 
