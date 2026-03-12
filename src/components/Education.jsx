@@ -12,11 +12,11 @@ const education = [
   },
   {
     id: '02',
-    degree: 'Kenya Certificate of Secondary Education',
-    institution: "St. Mary's School, Yala",
-    period: '2015 — 2018',
-    description: 'Completed secondary education with a strong foundation in Mathematics and Sciences, which laid the groundwork for a career in technology and engineering.',
-    tags: ['Mathematics', 'Sciences', 'Technology'],
+    degree: 'DevOps Engineering',
+    institution: "Moringa School",
+    period: '2024 — 2024',
+    description: 'Completed intensive DevOps Engineering training at Moringa School (2024), gaining hands-on experience in containerization with Docker, Kubernetes orchestration, CI/CD pipelines, cloud platforms, and modern software deployment practices',
+    tags: ['DevOps Engineering', 'Containerization', 'Kubernetes', 'CI/CD Pipelines', 'Cloud Computing', 'Infrastructure as Code'],
     icon: '📚',
   },
 ]
